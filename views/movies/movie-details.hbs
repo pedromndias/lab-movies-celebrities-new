@@ -1,0 +1,19 @@
+<div class="d-flex flex-column align-items-center">
+    <div class="card d-flex flex-column align-items-center">
+<h2>{{this.singleMovie.title}}</h2>
+<div class="card-body">
+<p>Genre: {{this.singleMovie.genre}}</p>
+<p>Plot: {{this.singleMovie.plot}}</p>
+<h5>Cast:</h5>
+{{#each this.singleMovie.cast}}
+    <li>{{this.name}}</li>
+{{/each}}
+<form action="/movies/{{this.singleMovie._id}}/delete" method="post">
+    <button class="btn btn-danger">Delete</button>
+</form>
+<a href="/movies/{{this.singleMovie._id}}/edit">
+    <button class="btn btn-warning">Edit</button>
+</a>
+</div>
+</div>
+</div>

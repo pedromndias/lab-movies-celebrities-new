@@ -1,8 +1,29 @@
 body {
-  padding: 50px;
+  margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-a {
-  color: #00b7ff;
+
+
+
+
+footer,
+.navigation-bar {
+  background-color: #00b7ff;
+  height: 70px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.navigation-bar a {
+  color: white;
+}
+
+footer {
+  padding-left: 20px;
 }

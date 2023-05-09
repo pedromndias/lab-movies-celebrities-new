@@ -1,0 +1,28 @@
+<div class="d-flex flex-column align-items-center">
+    <div class="card d-flex flex-column align-items-center">
+<h2>Create Movie</h2>
+<div class="card-body">
+<form action="/movies/create" method="post">
+    <label for="title">Title: </label>
+    <input type="text" name="title" class="form-control">
+    <br>
+    <label for="genre">Genre: </label>
+    <input type="text" name="genre" class="form-control">
+    <br>
+    <label for="plot">Plot: </label>
+    <input type="text" name="plot" class="form-control">
+    <br>
+    <label for="cast">Cast: </label>
+    <select name="cast" multiple="true" class="form-select">
+        {{!-- Iterate through all the celebrities and show option by its id (and render the name): --}}
+        {{#each allCelebrities}}
+            <option value="{{this._id}}">{{this.name}}</option>
+        {{/each}}
+    </select>
+    <br>
+    <button class="btn btn-info">Create Movie</button>
+
+</form>
+</div>
+</div>
+</div>
