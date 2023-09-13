@@ -1,8 +1,8 @@
 <div class="d-flex flex-column align-items-center">
     <h2>All Movies</h2>
-    <div>
+    <div class="list-group">
         {{#each allMovies}}
-            <li><a href="/movies/{{this._id}}">{{this.title}}</a></li>
+            <a class="list-group-item list-group-item-action" href="/movies/{{this._id}}">{{this.title}}</a>
 
         {{/each}}
     </div>
